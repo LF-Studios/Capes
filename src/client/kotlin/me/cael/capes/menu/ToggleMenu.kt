@@ -45,11 +45,11 @@ class ToggleMenu(parent: Screen, gameOptions: Options) : MainMenu(parent, gameOp
             it.message = CapeType.CLOAKSPLUS.getToggleText(config.enableCloaksPlus)
         }.pos(width / 2 - 155, height / 7 + 3 * 24).size(150, 20).build())
 
-//        addDrawableChild(ButtonWidget.builder(CapeType.CLOAKSPLUS.getToggleText(config.enableCloaksPlus)) {
-//            config.enableCloaksPlus = !config.enableCloaksPlus
-//            config.save()
-//            it.message = CapeType.CLOAKSPLUS.getToggleText(config.enableCloaksPlus)
-//        }.position(width / 2 - 155 + 160, height / 7 + 3 * 24).size(150, 20).build())
+        addRenderableWidget(Button.builder(CapeType.LFLAUNCHER.getToggleText(config.enableLFLauncher)) {
+            config.enableLFLauncher = !config.enableLFLauncher
+            config.save()
+            it.message = CapeType.LFLAUNCHER.getToggleText(config.enableLFLauncher)
+        }.pos(width / 2 - 155 + 160, height / 7 + 3 * 24).size(150, 20).build())
 
         addRenderableWidget(Button.builder(elytraMessage(config.enableElytraTexture)) {
             config.enableElytraTexture = !config.enableElytraTexture
